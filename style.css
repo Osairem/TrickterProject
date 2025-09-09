@@ -1,0 +1,1292 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'inter', sans-serif !important;
+        }
+        
+        .navbar .container {
+            max-width: 1230px;
+        }
+        /* Typography */
+        
+        h1 {
+            font-size: 40px !important;
+        }
+        
+        h2 {
+            font-size: 40px !important;
+        }
+        
+        h4 {
+            font-size: 24px !important;
+        }
+        
+        h6 {
+            font-size: 16px !important;
+            font-weight: 500 !important;
+        }
+        
+        h5 {
+            font-size: 16px !important;
+            font-weight: 500 !important;
+        }
+        
+        p {
+            font-size: 14px !important;
+        }
+        
+        .nav-link {
+            font-size: 16px;
+        }
+        
+        .singer-section .card-body .card-text {
+            font-size: 10px;
+        }
+        
+        .btn-primary {
+            background-color: #ebebf9;
+        }
+        
+        .sub-heading {
+            font-weight: 400 !important;
+            font-size: 20px !important;
+        }
+        /* Brand */
+        
+        .header-nav .navbar-brand {
+            font-size: 1.5rem;
+            color: #fff;
+        }
+        /* Base navbar */
+        
+        header {
+            margin-top: 13px;
+        }
+        
+        .navbar {
+            z-index: 10;
+            background-color: transparent;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(0px);
+            -webkit-backdrop-filter: blur(0px);
+        }
+        /* Enhanced navbar scroll effect */
+        
+        .navbar.scrolled {
+            background-color: rgba(51, 55, 191, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        #navbar-toggler-icon {
+            color: white;
+            font-size: 40px;
+        }
+        
+        .nav-btn {
+            width: 181px !important;
+            height: 40px !important;
+            background-color: white;
+            color: #3337BF;
+            border-radius: 16px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .nav-btn:hover::before {
+            left: 100%;
+        }
+        
+        .nav-btn:hover {
+            background-color: #2a237a;
+            color: white;
+            box-shadow: 0 8px 25px rgba(54, 47, 153, 0.4);
+            transform: translateY(-2px);
+        }
+        /* Nav links */
+        
+        .header-nav .nav-link {
+            color: #fff;
+            font-size: 1.05rem;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            /* Touch-friendly area */
+            border-radius: 10px;
+            /* Softer corners */
+            transition: color 0.2s ease, background-color 0.2s ease;
+        }
+        /* Responsive tweaks */
+        
+        @media (max-width: 991.98px) {
+            /* Make the left & right collapses stack nicely */
+            .navbar .collapse {
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+            }
+            /* Remove underline animation on mobile to keep layout tidy */
+            .navbar-nav .nav-link::after {
+                display: none;
+            }
+        }
+        /* Button Styles */
+        
+        .btn {
+            color: #3337BF;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .btn:hover {
+            color: #fffcfc;
+        }
+        
+        .btn:focus {
+            box-shadow: none;
+        }
+        /* Hero Section */
+        
+        .hero-section {
+            margin-top: -79px;
+            background-image: url('./img/heroBanner.svg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 656px;
+            padding: 120px 0 60px 0;
+            position: relative;
+        }
+        
+        .hero-section .container {
+            margin-top: -145px;
+            z-index: 2;
+        }
+        /* Form Styles */
+        
+        .input-group-text {
+            background: white;
+            border: none;
+            color: #666;
+        }
+        
+        .name-input {
+            width: 300px !important;
+            height: 56PX !important;
+        }
+        
+        .date-input,
+        .location-input {
+            width: 200px !important;
+            height: 56PX !important;
+        }
+        
+        .form-control {
+            background: white;
+            border: none;
+            box-shadow: none;
+            font-size: 0.95rem;
+            padding: 0.75rem 1rem;
+        }
+        
+        .input-group {
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        #find-ticket-btn {
+            MARGIN-RIGHT: 49px;
+            MARGIN-TOP: -4px;
+            width: 160px !important;
+            height: 56PX !important;
+            background-color: #3337BF;
+            color: #fff;
+            border-radius: 16px;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #find-ticket-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s;
+        }
+        
+        #find-ticket-btn:hover::before {
+            left: 100%;
+        }
+        
+        #find-ticket-btn:hover {
+            background-color: #2a237a;
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(54, 47, 153, 0.4);
+        }
+        
+        #find-ticket-btn:active {
+            transform: translateY(-1px) scale(0.98);
+        }
+        /* Card styling */
+        
+        #cardCarousel {
+            margin-top: -100px;
+            z-index: 5;
+        }
+        
+        .card-body p {
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+        
+        .card .btn {
+            border-color: #ddd;
+            background-color: #ddd;
+            display: block;
+            width: 100%;
+            margin-top: auto;
+            border-radius: 0 0 8px 8px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .card .btn:hover::before {
+            left: 100%;
+        }
+        
+        .card .btn:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        /* Sirf Singer Section ke cards ke liye */
+        
+        .singer-section {
+            margin-top: -80px;
+        }
+        
+        .singer-section .card {
+            border: none;
+            border-radius: 12px;
+            background: #d1cdcd;
+            background: linear-gradient(180deg, rgba(209, 205, 205, 0.51) 0%, rgba(255, 255, 255, 1) 29%);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            overflow: visible;
+            margin: 0px 8px 0px 10px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .singer-section .card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .singer-section .card img {
+            height: 205px !important;
+            border-radius: 12px;
+            border: 4px solid #d1cdcd;
+            border: linear-gradient(180deg, rgba(209, 205, 205, 0.72) 49%, rgba(255, 255, 255, 0) 64%);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .singer-section .card-img-wrapper {
+            margin-top: -100px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .singer-section .card:hover img {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .singer-section .card-body {
+            padding: 6px 20px;
+            text-align: left;
+            color: #525050;
+        }
+        
+        .singer-section .card-body .btn {
+            width: 100%;
+            background: #e6e0ff;
+            color: #333;
+            font-weight: 500;
+            border-radius: 10px;
+            padding: 10px 0;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .singer-section .card-body .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .singer-section .card-body .btn:hover::before {
+            left: 100%;
+        }
+        
+        .singer-section .btn:hover {
+            background: #4a4858;
+            color: white;
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        /*CONCERT Section Styling */
+        
+        #concerts {
+            background: #fff;
+        }
+        
+        #concerts h4 {
+            font-size: 24px;
+            font-weight: 500;
+        }
+        
+        #concerts .text-muted {
+            font-size: 16px;
+        }
+        /* Card Grid Layout */
+        
+        #concerts .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        /* Card Style */
+        
+        #concerts .card {
+            margin-right: 20px;
+            margin-top: 250px;
+            background: #d1cdcd;
+            background: linear-gradient(180deg, rgba(209, 205, 205, 1) 0%, rgba(255, 255, 255, 1) 24%);
+            border: none;
+            border-radius: 16px;
+            overflow: visible;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            width: 300px;
+            position: relative;
+        }
+        
+        #concerts .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(51, 55, 191, 0.05), rgba(51, 55, 191, 0.1));
+            border-radius: 16px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+        
+        #concerts .card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+        }
+        
+        #concerts .card:hover::before {
+            opacity: 1;
+        }
+        /* Image Wrapper */
+        
+        #concerts .card-img-wrapper {
+            margin-top: -250px;
+            position: relative;
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+        }
+        
+        #concerts .artist-img {
+            width: 100%;
+            height: 100%;
+        }
+        /* Overlay Timer */
+        
+        #concerts .image-overlay {
+            position: absolute;
+            bottom: 0;
+            width: 82%;
+            margin-left: 26px;
+            border-bottom-left-radius: 13px;
+            border-bottom-right-radius: 13px;
+            background: #E7363680;
+            color: #fff;
+            text-align: center;
+            padding: 6px 0;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        /* Card Body */
+        
+        #concerts .card {
+            overflow: visible;
+        }
+        
+        #concerts .card-body {
+            padding: 5px 36px;
+            text-align: left;
+            color: #525050;
+        }
+        
+        #concerts .card-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        
+        #concerts .card-text {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 6px;
+        }
+        /* Book Now Button */
+        
+        #concerts .btn:hover {
+            background: #4a4858;
+            color: white;
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        /* Section buyingTicket-section */
+        
+        .buyingTicket-section {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .section-head {
+            text-align: left;
+            padding: 20px;
+        }
+        
+        .section-head h3 {
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .buy-btn {
+            color: #3337BF !important;
+            color: white !important;
+            font-weight: 400;
+            font-size: 14px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .buy-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .buy-btn:hover::before {
+            left: 100%;
+        }
+        
+        .buy-btn:hover {
+            background-color: #2a237a !important;
+            color: white !important;
+            box-shadow: 0 8px 25px rgba(54, 47, 153, 0.4);
+            transform: translateY(-2px) scale(1.02);
+        }
+        
+        .section-head .btn {
+            background-color: #3337BF;
+            color: #fff;
+            margin-top: 15px;
+            border-radius: 50px;
+            padding: 0.6rem 1.3rem;
+        }
+        
+        .step-card {
+            border-radius: 50%;
+            width: 220px;
+            height: 220px;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .step-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(51, 55, 191, 0.1), rgba(51, 55, 191, 0.05));
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+        
+        .step-card:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .step-card:hover::before {
+            opacity: 1;
+        }
+        
+        .step-card img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 12px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .step-card:hover img {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .step-card h5 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        
+        .step-card p {
+            font-size: 0.85rem;
+            color: #555;
+            margin: 0;
+            line-height: 1.3;
+        }
+        /* Responsive fix */
+        
+        @media(max-width: 767.98px) {
+            .step-card {
+                width: 180px;
+                height: 180px;
+                padding: 20px;
+            }
+        }
+        /* Concert Cards Section */
+        
+        #coming-overlay {
+            border-radius: 13px;
+        }
+        
+        #concerts .image-overlay-coming {
+            position: absolute;
+            bottom: 0;
+            height: 350px;
+            width: 82%;
+            margin-left: 39px;
+            background: #00000099;
+            color: #fff;
+            text-align: center;
+            padding: 6px 0;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .overlay-text-coming {
+            margin-top: 143px;
+            margin-bottom: -2px;
+        }
+        
+        .concerts-section .concert-card {
+            margin-right: 20px;
+            margin-top: 250px;
+            background: #d1cdcd;
+            background: linear-gradient(180deg, rgba(209, 205, 205, 1) 0%, rgba(255, 255, 255, 1) 24%);
+            border: none;
+            border-radius: 16px;
+            overflow: visible;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            width: 300px;
+            position: relative;
+        }
+        
+        .concerts-section .concert-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(51, 55, 191, 0.1), rgba(51, 55, 191, 0.05));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+            border-radius: 15px;
+        }
+        
+        .concerts-section .concert-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .concerts-section .concert-card:hover::before {
+            opacity: 1;
+        }
+        
+        .concerts-section .concert-card:hover .concert-overlay {
+            background: rgba(0, 0, 0, 0.6);
+            transform: scale(1.05);
+        }
+        
+        .concerts-section .concert-img {
+            object-fit: cover;
+            position: relative;
+            height: 300px;
+            width: 250px;
+            background: #ddd url("./img/Singer\ 2.svg") center/cover no-repeat;
+            margin-top: -250px;
+            position: relative;
+        }
+        
+        .concerts-section .concert-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .concerts-section .concert-overlay small {
+            font-size: 0.85rem;
+            margin-top: 5px;
+        }
+        
+        .concerts-section .concert-body {
+            padding: 15px;
+        }
+        
+        .concerts-section .concert-body p {
+            color: #6c757d;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+        }
+        
+        .concert-card-btn {
+            width: 100% !important;
+            background: #e6e0ff !important;
+            color: #333 !important;
+            font-weight: 500!important;
+            border: none;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .concert-card-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .concert-card-btn:hover::before {
+            left: 100%;
+        }
+        
+        .concert-card-btn:hover {
+            background: #4a4858 !important;
+            color: white !important;
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        /* Newsletter Section */
+        
+        .newsletter-box {
+            background: none;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        
+        .benefit-item {
+            background: none;
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .benefit-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(51, 55, 191, 0.05), rgba(51, 55, 191, 0.02));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+            border-radius: 12px;
+        }
+        
+        .benefit-item:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .benefit-item:hover::before {
+            opacity: 1;
+        }
+        
+        .benefit-icon {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .benefit-item:hover .benefit-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+        
+        .card {
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+        
+        .author-info {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        
+        .author-info img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        .rewives-form {
+            border: 1px solid #ccc;
+            padding: 10px 15px;
+            width: 100%;
+        }
+        
+        .subscribe-btn {
+            background: #3337BF;
+            color: #fff;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .subscribe-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .subscribe-btn:hover::before {
+            left: 100%;
+        }
+        
+        .subscribe-btn:hover {
+            background: #2a237a;
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(54, 47, 153, 0.4);
+        }
+        /* Testimonials Section */
+        
+        .rewives-section {
+            text-align: center;
+        }
+        
+        .rewives {
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            background: #fff;
+            padding: 25px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .rewives::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(51, 55, 191, 0.05), rgba(51, 55, 191, 0.02));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+            border-radius: 20px;
+        }
+        
+        .rewives:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .rewives:hover::before {
+            opacity: 1;
+        }
+        
+        .rewives i {
+            display: flex;
+            align-items: left;
+            font-size: 28px;
+            color: #0d6efd;
+            margin-bottom: 15px;
+        }
+        
+        .rewives p {
+            font-size: 15px;
+            color: #333;
+            text-align: left;
+        }
+        
+        .rewiver-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 15px;
+        }
+        
+        .rewiver-info img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #eee;
+        }
+        
+        .rewiver-info small {
+            display: block;
+            font-size: 14px;
+        }
+        
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .section-subtitle {
+            color: #6c757d;
+            margin-bottom: 40px;
+            font-size: 15px;
+        }
+        
+        .custom-btn {
+            border-radius: 16px;
+            padding: 10px 20px;
+            font-size: 15px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .custom-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .custom-btn:hover::before {
+            left: 100%;
+        }
+        
+        .custom-btn:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        #leave-comment-btn {
+            background-color: #3337BF;
+            color: #ffffff;
+        }
+        
+        #leave-comment-btn:hover {
+            background-color: #2a237a;
+            color: #ffffff;
+        }
+        
+        .all-news-btn {
+            background-color: #3337BF;
+            color: #ffffff;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .all-news-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .all-news-btn:hover::before {
+            left: 100%;
+        }
+        
+        .all-news-btn:hover {
+            background-color: #2a237a;
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(54, 47, 153, 0.4);
+        }
+        /* Section Background */
+        
+        .questions-section {
+            background: #f9f9f9;
+            /* halka gray jaisa image mein */
+            padding: 50px 0;
+        }
+        /* Left Sidebar */
+        
+        .questions-sidebar {
+            padding: 20px;
+            border-radius: 6px;
+        }
+        
+        .questions-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .questions-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: #444;
+            margin-bottom: 12px;
+        }
+        
+        .questions-subtitle {
+            margin-top: 25px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+        
+        .questions-text {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 15px;
+        }
+        
+        .questions-accordion .accordion-item {
+            border: none;
+            border-bottom: 1px solid #e5e5e5;
+            /* sirf neeche line */
+            border-radius: 0;
+            background: transparent;
+        }
+        
+        .questions-accordion .accordion-button {
+            background: transparent;
+            font-size: 15px;
+            font-weight: 500;
+            color: #333;
+            padding: 14px 0;
+            box-shadow: none;
+            transition: all 0.3s ease;
+        }
+        
+        .questions-accordion .accordion-button:hover {
+            color: #3337BF;
+            transform: translateX(5px);
+        }
+        
+        .questions-accordion .accordion-button:not(.collapsed) {
+            color: #3337BF;
+        }
+        
+        .questions-body {
+            font-size: 14px;
+            color: #555;
+            padding: 0 0 14px 0;
+        }
+        
+        .questions-section i {
+            color: #362f99;
+            font-size: 16px;
+            margin-right: 8px;
+        }
+        /* Read More Button */
+        
+        .questions-btn {
+            background-color: #3337BF;
+            color: #ffffff;
+            border-radius: 16px;
+            font-size: 14px;
+            padding: 6px 16px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .questions-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .questions-btn:hover::before {
+            left: 100%;
+        }
+        
+        .questions-btn:hover {
+            background-color: #2a237a;
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(54, 47, 153, 0.4);
+        }
+        
+        .questions-readmore {
+            border-radius: 16px;
+            padding: 6px 16px;
+            font-size: 14px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .questions-readmore::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(51, 55, 191, 0.1), transparent);
+            transition: left 0.5s;
+        }
+        
+        .questions-readmore:hover::before {
+            left: 100%;
+        }
+        
+        .questions-readmore:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        /* Logos Section */
+        
+        .logo-row {
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .logo-row img {
+            max-width: 120px;
+            /* control logo size */
+            margin: 10px;
+            opacity: 0.7;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            filter: grayscale(0.3);
+        }
+        
+        .logo-row img:hover {
+            opacity: 1;
+            /* hover effect */
+            transform: scale(1.1) translateY(-3px);
+            filter: grayscale(0);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        /* Footer Section */
+        
+        footer {
+            background: #fff;
+            padding: 50px 0 20px;
+            border-top: 1px solid #eee;
+            font-size: 14px;
+            color: #333;
+        }
+        
+        footer h5 {
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        footer a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        footer a::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 2px;
+            background-color: #3337BF;
+            transition: width 0.3s ease;
+        }
+        
+        footer a:hover {
+            color: #3337BF;
+            transform: translateX(5px);
+        }
+        
+        footer a:hover::before {
+            width: 100%;
+        }
+        
+        .newsletter input {
+            border-radius: 30px 0 0 30px;
+            border: 1px solid #ccc;
+            padding: 10px 15px;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .newsletter input:focus {
+            border-color: #3337BF;
+            box-shadow: 0 0 0 2px rgba(51, 55, 191, 0.1);
+            outline: none;
+        }
+        
+        .newsletter button {
+            border-radius: 0 30px 30px 0;
+            border: 1px solid #ccc;
+            border-left: 0;
+            background: #fff;
+            padding: 10px 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .newsletter button:hover {
+            background: #3337BF;
+            color: white;
+            border-color: #3337BF;
+            transform: scale(1.05);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .social-icons a {
+            color: #1877F2;
+            margin-left: 10px;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .social-icons a:hover {
+            color: #3337BF;
+            transform: translateY(-3px) scale(1.2);
+        }
