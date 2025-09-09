@@ -1,0 +1,668 @@
+:root {
+    --loaderTime: 2s;
+    --contentTime: 2.2s;
+}
+
+Smooth scrolling for the entire page html {
+    scroll-behavior: smooth;
+}
+
+
+/* Loader Screen */
+
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #9a9ca5;
+    /* same overlay color you used */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: hideLoader 2s ease forwards;
+    animation-delay: 2s;
+    /* Loader show time */
+    z-index: 9999;
+}
+
+
+/* New Animated Box Loader */
+
+.loader {
+    width: 60px;
+    aspect-ratio: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    display: grid;
+}
+
+.loader,
+.loader:before,
+.loader:after {
+    --c: no-repeat linear-gradient(#046D8B 0 0);
+    /* Loader color */
+    background: var(--c), var(--c), var(--c), var(--c);
+    animation: l18-1 var(--loaderTime) infinite cubic-bezier(0, 0, 1, 1), l18-2 var(--loaderTime) infinite;
+}
+
+.loader:before,
+.loader:after {
+    content: "";
+    grid-area: 1/1;
+    animation-timing-function: cubic-bezier(0, 0.2, 1, 1), linear;
+}
+
+.loader:after {
+    margin: 10px;
+    animation-timing-function: cubic-bezier(0, 0.4, 1, 1), linear;
+}
+
+
+/* Keyframes for the box loader */
+
+@keyframes l18-1 {
+    0%,
+    10% {
+        background-size: 0 4px, 4px 0
+    }
+    40%,
+    60% {
+        background-size: 100% 4px, 4px 100%
+    }
+    90%,
+    100% {
+        background-size: 0 4px, 4px 0
+    }
+}
+
+@keyframes l18-2 {
+    0%,
+    49.9% {
+        background-position: 0 0, 0 0, 100% 100%, 100% 100%
+    }
+    50%,
+    100% {
+        background-position: 100% 0, 0 100%, 0 100%, 100% 0
+    }
+}
+
+
+/* Hide loader, show content */
+
+@keyframes hideLoader {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+/* Content fade-in */
+
+@keyframes showContent {
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* CSS-only animations and keyframes */
+
+
+/* =========================
+   🔥 Keyframes
+========================= */
+
+
+/* Fade In Left */
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Fade In Right */
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Simple Fade In */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Slide In From Top */
+
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Pulse */
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* Float */
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* Fade In Up */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Image Load */
+
+@keyframes imageLoad {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* Shimmer */
+
+@keyframes shimmer {
+    0% {
+        background-position: -200px 0;
+    }
+    100% {
+        background-position: calc(200px + 100%) 0;
+    }
+}
+
+
+/* =========================
+   🔥 Animation Classes
+========================= */
+
+.fadeInLeft {
+    opacity: 0;
+    animation: fadeInLeft 2s var(--contentTime) forwards;
+}
+
+.fadeInRight {
+    opacity: 0;
+    animation: fadeInRight 2s var(--contentTime) forwards;
+}
+
+.fadeIn {
+    opacity: 0;
+    animation: fadeIn 2s var(--contentTime) forwards;
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation: fadeInUp 2s var(--contentTime) forwards;
+}
+
+.slideInFromTop {
+    opacity: 0;
+    animation: slideInFromTop 2s var(--contentTime) forwards;
+}
+
+.pulse {
+    opacity: 0;
+    animation: pulse 2s var(--contentTime) forwards;
+}
+
+.float {
+    opacity: 0;
+    animation: float 2s var(--contentTime) forwards;
+}
+
+.image-load {
+    animation: imageLoad 0.6s ease-out forwards;
+}
+
+
+/* Shimmer effect */
+
+.shimmer {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200px 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+
+/* =========================
+   🔥 Animation Delays
+========================= */
+
+.animate-delay-1 {
+    animation-delay: 0.1s;
+}
+
+.animate-delay-2 {
+    animation-delay: 0.2s;
+}
+
+.animate-delay-3 {
+    animation-delay: 0.3s;
+}
+
+.animate-delay-4 {
+    animation-delay: 0.4s;
+}
+
+.animate-delay-5 {
+    animation-delay: 0.5s;
+}
+
+.animate-delay-6 {
+    animation-delay: 0.6s;
+}
+
+
+/* =========================
+   🔥 Scroll Animations
+========================= */
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-play-state: paused;
+}
+
+.animate-on-scroll:nth-child(1) {
+    animation-delay: 0.1s;
+    animation-play-state: running;
+}
+
+.animate-on-scroll:nth-child(2) {
+    animation-delay: 0.2s;
+    animation-play-state: running;
+}
+
+.animate-on-scroll:nth-child(3) {
+    animation-delay: 0.3s;
+    animation-play-state: running;
+}
+
+.animate-on-scroll:nth-child(4) {
+    animation-delay: 0.4s;
+    animation-play-state: running;
+}
+
+.animate-on-scroll:nth-child(5) {
+    animation-delay: 0.5s;
+    animation-play-state: running;
+}
+
+.animate-on-scroll:nth-child(6) {
+    animation-delay: 0.6s;
+    animation-play-state: running;
+}
+
+
+/* Hover & active states */
+
+.header-nav .nav-link:hover {
+    color: #9a95ff;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.header-nav .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.14);
+}
+
+
+/* Icon sizing & color harmony */
+
+#navbar-toggler-icon {
+    color: white;
+    font-size: 34px;
+}
+
+#navbar-toggler-icon:hover {
+    color: #9a95ff;
+    cursor: pointer;
+}
+
+
+/* Enhanced button hover effects for all buttons */
+
+.btn:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Enhanced card hover effects for all cards */
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Enhanced input focus effects */
+
+.form-control:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(51, 55, 191, 0.2);
+}
+
+
+/* Enhanced link hover effects */
+
+a:hover {
+    transform: translateY(-1px);
+}
+
+
+/* Enhanced image hover effects */
+
+img:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+
+/* Enhanced icon hover effects */
+
+i:hover {
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+}
+
+
+/* Enhanced section title hover effects */
+
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover {
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+
+/* Enhanced paragraph hover effects */
+
+p:hover {
+    transform: translateY(-1px);
+    transition: all 0.3s ease;
+}
+
+
+/* Enhanced list item hover effects */
+
+li:hover {
+    transform: translateX(5px);
+    transition: all 0.3s ease;
+}
+
+
+/* Enhanced div hover effects */
+
+div:hover {
+    transition: all 0.3s ease;
+}
+
+
+/* Enhanced span hover effects */
+
+span:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+
+/* Enhanced section hover effects */
+
+section:hover {
+    transition: all 0.3s ease;
+}
+
+
+/* Enhanced main hover effects */
+
+main:hover {
+    transition: all 0.3s ease;
+}
+
+
+/* Enhanced header hover effects */
+
+header:hover {
+    transition: all 0.3s ease;
+}
+
+
+/* Enhanced footer hover effects */
+
+footer:hover {
+    transition: all 0.3s ease;
+}
+
+
+/* Enhanced nav hover effects */
+
+nav:hover {
+    transition: all 0.3s ease;
+}
+
+
+/* Enhanced ul hover effects */
+
+ul:hover {
+    transition: all 0.3s ease;
+}
+
+
+/* Enhanced ol hover effects */
+
+ol:hover {
+    transition: all 0.3s ease;
+}
+
+
+/* Enhanced table hover effects */
+
+table:hover {
+    transition: all 0.3s ease;
+}
+
+
+/* Enhanced thead hover effects */
+
+thead:hover {
+    transition: all 0.3s ease;
+}
+
+
+/* Enhanced tbody hover effects */
+
+tbody:hover {
+    transition: all 0.3s ease;
+}
+
+
+/* Enhanced th hover effects */
+
+th:hover {
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+
+/* Enhanced td hover effects */
+
+td:hover {
+    transform: translateY(-1px);
+    transition: all 0.3s ease;
+}
+
+
+/* Enhanced caption hover effects */
+
+caption:hover {
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+
+/* Enhanced colgroup hover effects */
+
+colgroup:hover {
+    transition: all 0.3s ease;
+}
+
+
+/* Enhanced col hover effects */
+
+col:hover {
+    transition: all 0.3s ease;
+}
+
+
+/* Enhanced form hover effects */
+
+form:hover {
+    transition: all 0.3s ease;
+}
+
+
+/* Enhanced label hover effects */
+
+label:hover {
+    transform: translateY(-1px);
+    transition: all 0.3s ease;
+}
+
+
+/* Enhanced select hover effects */
+
+select:hover {
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+
+/* Enhanced dialog hover effects */
+
+dialog:hover {
+    transition: all 0.3s ease;
+}
+
+
+/* Enhanced menu hover effects */
+
+menu:hover {
+    transition: all 0.3s ease;
+}
+
+
+/* Enhanced object hover effects */
+
+object:hover {
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+
+/* Enhanced iframe hover effects */
+
+iframe:hover {
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+
+/* Enhanced svg hover effects */
+
+svg:hover {
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+
+/* Enhanced path hover effects */
+
+path:hover {
+    transition: all 0.3s ease;
+}
+
+
+/* Enhanced circle hover effects */
+
+circle:hover {
+    transition: all 0.3s ease;
+}
+
+
+/* Enhanced marker hover effects */
+
+marker:hover {
+    transition: all 0.3s ease;
+}
